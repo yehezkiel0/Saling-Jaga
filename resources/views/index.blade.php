@@ -8,6 +8,6 @@
     @vite('public/css/style.css')
 </head>
 <body>
-    <h1 class="text-slate-500">Test</h1>
+    @include('components.navbar')
 </body>
 </html>
