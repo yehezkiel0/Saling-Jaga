@@ -14,17 +14,17 @@
     <div class="jumbotron pt-20 pl-10 font-poppins bg-cover bg-center min-h-screen text-white pb-5 flex lg:flex-row flex-col-reverse lg:items-start items-center justify-between"
         style="background-image: url('/images/home/hero-background.png')">
         <div class="lg:w-[45%] w-full lg:mt-10 lg:pb-0 pb-20">
-            <h1 class="lg:text-[45px] text-[30px] font-semibold leading-tight mt-28">Website pelaporan kasus kekerasan seksual</h1>
-            <p class="text-sm my-6 w-[90%]">Anda merasa mengalami kekerasan seksual di perguruan tinggi atau Anda
+            <h1 class="lg:text-[45px] text-[30px] font-semibold leading-tight">Website pelaporan kasus kekerasan seksual</h1>
+            <p class="text-sm my-6 w-[90%]">Anda merasa mengalami kekerasan seksual di perguruan tinggi? Atau Anda
                 mengetahui adanya kekerasan
                 seksual?
                 Segera laporkan di sini.</p>
             <div>
                 <button
-                    class="font-semibold rounded-md bg-white hover:opacity-80 transition duration-300 text-primary px-5 py-3 focus:ring-white focus:ring-4">Laporkan
+                    class="font-semibold rounded-md bg-white hover:opacity-80 transition duration-300 text-primary px-5 py-3 focus:ring-white focus:ring-4 md:mb-0 mb-2 mr-2">Laporkan
                     sekarang</button>
                 <button
-                    class="rounded-md px-5 py-3 ml-5 border-2 border-transparent hover:border-white transition duration-300">pelajari
+                    class="rounded-md px-5 py-3 lg:ml-5 border-2 md:border-transparent border-white hover:border-white transition duration-300">pelajari
                     dahulu</button>
             </div>
         </div>
@@ -86,7 +86,7 @@
     <div class="cara-pelaporan font-poppins flex flex-col items-center justify-center">
         <h1 class="text-primary text-3xl font-bold mt-20 mb-10">cara pelaporan</h1>
         <div class="flex flex-wrap justify-center mx-auto">
-            <div class="card shadow-lg rounded-xl px-7 py-7 w-[350px] m-5">
+            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">01</h3>
                     <h4 class="font-semibold text-lg ml-2">registrasi</h4>
@@ -94,7 +94,7 @@
                 <p class="text-sm">Sebelum menyampaikan pengaduan, Anda harus terdaftar. Klik disini apabila Anda belum
                     terdaftar</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 w-[350px] m-5">
+            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">02</h3>
                     <h4 class="font-semibold text-lg ml-2">Menerima link aktivasi via email</h4>
@@ -102,14 +102,14 @@
                 <p class="text-sm">Setelah mengisi form pendaftaran dengan lengkap, link aktivasi akun akan dikirm ke
                     email Anda</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 w-[350px] m-5">
+            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">03</h3>
                     <h4 class="font-semibold text-lg ml-2">Aktivasi akun</h4>
                 </div>
                 <p class="text-sm">Untuk melakukan aktivasi akun, klik link aktivasi yang Anda terima melalui email.</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 w-[350px] m-5">
+            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">04</h3>
                     <h4 class="font-semibold text-lg ml-2">Login</h4>
@@ -117,7 +117,7 @@
                 <p class="text-sm">Apabila akun Anda telah aktif, silakan login untuk dapat menyampaikan pengaduan, klik
                     disini untuk login.</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 w-[350px] m-5">
+            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">05</h3>
                     <h4 class="font-semibold text-lg ml-2">Sampaikan pengaduan</h4>
@@ -125,7 +125,7 @@
                 <p class="text-sm">Baca dengan seksama penjelasan mengenai jenis pengaduan yang akan Anda sampaikan,
                     apabila telah yakin klik tombol “Lakukan Pengaduan”.</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 w-[350px] m-5">
+            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">06</h3>
                     <h4 class="font-semibold text-lg ml-2">Menerima nomor Tiket</h4>
@@ -133,7 +133,7 @@
                 <p class="text-sm">Pengaduan yang Anda sampaikan akan mengalami validasi, apabila valid nomor tiket
                     pengaduan akan dikirim ke email Anda.</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 w-[350px] m-5">
+            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">07</h3>
                     <h4 class="font-semibold text-lg ml-2">Telusuri pengaduan</h4>
@@ -148,8 +148,8 @@
             <h1 class="text-3xl font-bold text-primary">Berita</h1>
             <p class="text-sm mt-3">Berita terbaru dan terhangat terkait dengan kasus kekerasan seksual di Indonesia.</p>
         </div>
-        <div class="flex justify-center">
-            <div class="card-berita-primary w-[350px] shadow-lg m-2 rounded-lg">
+        <div class="flex justify-center lg:flex-row flex-col lg:items-start items-center lg:p-0 p-3">
+            <div class="card-berita-primary lg:w-[350px] w-full shadow-lg m-2 rounded-lg">
                 <div class="bg-cover bg-center w-full h-[200px] rounded-t-lg"
                     style="background-image: url('https://images.unsplash.com/photo-1511608170515-b4557034155c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80')">
                 </div>
@@ -166,9 +166,9 @@
                     </div>
                 </div>
             </div>
-            <div class="cards-berita-secondary">
+            <div class="cards-berita-secondary lg:w-fit w-full">
                 <a href="/"
-                    class="w-[450px] m-2 rounded-lg flex items-center hover:opacity-90 transition duration-300">
+                    class="lg:w-[450px] w-full m-2 rounded-lg flex items-center hover:opacity-90 transition duration-300">
                     <div class="bg-cover bg-center w-[50%] min-h-[120px] rounded-lg"
                         style="background-image: url('https://images.unsplash.com/photo-1511608170515-b4557034155c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80')">
                     </div>
@@ -186,7 +186,7 @@
                     </div>
                 </a>
                 <a href="/"
-                    class="w-[450px] m-2 rounded-lg flex items-center hover:opacity-90 transition duration-300">
+                    class="lg:w-[450px] w-full m-2 rounded-lg flex items-center hover:opacity-90 transition duration-300">
                     <div class="bg-cover bg-center w-[50%] min-h-[120px] rounded-lg"
                         style="background-image: url('https://images.unsplash.com/photo-1511608170515-b4557034155c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80')">
                     </div>
@@ -204,7 +204,7 @@
                     </div>
                 </a>
                 <a href="/"
-                    class="w-[450px] m-2 rounded-lg flex items-center hover:opacity-90 transition duration-300">
+                    class="lg:w-[450px] w-full m-2 rounded-lg flex items-center hover:opacity-90 transition duration-300">
                     <div class="bg-cover bg-center w-[50%] min-h-[120px] rounded-lg"
                         style="background-image: url('https://images.unsplash.com/photo-1511608170515-b4557034155c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80')">
                     </div>
@@ -224,6 +224,7 @@
             </div>
         </div>
     </div>
+    @include('components.footer')
 </body>
 
 </html>
