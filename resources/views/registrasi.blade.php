@@ -17,11 +17,31 @@
         </div>
             <div class = "lg:ml-20 items-center flex flex-col lg:w-fit" >
                 <h1 class = "text-5xl font-[600]">Buat akun baru</h1>
-                <form class= "lg:w-fit w-full lg:px-0 px-20" action="method = 'post'">
-                    <input class = "my-5 border-2  border-slate-700 rounded-md block lg:w-[500px] w-full pl-5 pr-24 py-2" type="text " id = "Nama Lengkap" name = "Nama Lengkap" placeholder = "Nama Lengkap">
-                    <input class = "my-5 border-2  border-slate-700 block rounded-md lg:w-[500px] w-full pr-24 pl-5 py-2"type="text" id = "Email" name = "Email" placeholder = "Email">
-                    <input class = "my-5 border-2  border-slate-700 block rounded-md lg:w-[500px] w-full pr-24 pl-5 py-2"type="password" id = "Password" name = "Password" placeholder = "Password">
-                    <input class = "my-5 border-2  border-slate-700 block rounded-md lg:w-[500px] w-full pr-24 pl-5 py-2"type="password" id = "kpassword" name = "Konfirmasi Password" placeholder = "Konfirmasi Password">
+                <form class= "lg:w-fit w-full lg:px-0 px-20" action="/register" method = "post">
+                    @csrf
+                    <input class = "my-5 border-2  border-slate-700 rounded-md block lg:w-[500px] w-full pl-5 pr-24 py-2 @error('name') is-invalid @enderror" 
+                    type="text " id = "name" name = "name" placeholder = "Nama Lengkap" required value="{{ old('name') }}">
+                    @error('name')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                    <input class = "my-5 border-2  border-slate-700 block rounded-md lg:w-[500px] w-full pr-24 pl-5 py-2 @error('email') is-invalid @enderror"
+                    type="text" id = "email" name = "email" placeholder = "Email" required value="{{ old('email') }}">
+                    @error('email')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                    <input class = "my-5 border-2  border-slate-700 block rounded-md lg:w-[500px] w-full pr-24 pl-5 py-2 @error('password') is-invalid @enderror"
+                    type="password" id = "password" name = "password" placeholder = "Password" required>
+                    @error('password')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                    <input class = "my-5 border-2  border-slate-700 block rounded-md lg:w-[500px] w-full pr-24 pl-5 py-2"
+                    type="password" id = "kpassword" name = "kpassword" placeholder = "Konfirmasi Password" required>
                 
 
                 <div class = "items-center flex flex-col w-full">
@@ -37,7 +57,7 @@
                         <img src="/images/register/Facebook.svg" class = "bg-[#1877F2] w-10 p-2 rounded-md mx-5" alt="">
                         <img src="/images/register/Apple.svg" class = "bg-black w-10 p-2 rounded-md" alt="">
                     </div>
-                <button class="bg-blue-600 px-32 py-3 rounded-md text-white w-[200px] mb-5 flex items-center justify-center">Register</button>
+                <button class="bg-blue-600 px-32 py-3 rounded-md text-white w-[200px] mb-5 flex items-center justify-center" type="submit">Register</button>
                 </form>
                 <p class="lg:mb-0 mb-8">Sudah punya akun? <a href="/login" class="text-[#1877F2]">Login</a></p>
                 </div>

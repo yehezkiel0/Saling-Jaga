@@ -16,12 +16,8 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('nim');
-            $table->enum('jenis_kelamin', ['laki-laki', 'perempuan']);
             $table->string('email');
-            $table->string('program_studi');
             $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

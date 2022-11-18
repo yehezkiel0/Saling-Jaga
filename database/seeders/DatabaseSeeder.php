@@ -26,6 +26,12 @@ class DatabaseSeeder extends Seeder
 
         User::factory(5)->create();
 
+        User::create([
+            'name' => 'Susss Banget',
+            'email' => 'susbanget@gmail.com',
+            'password' => bcrypt('12345')
+        ]);
+
         Faq::create([
             'question' => 'Apakah layanan ini ditujukan untuk mahasiswa Fakultas Ilmu Komputer saja?',
             'answer' => 'Iya, karena layanan Saling jaga ini beroperasi di lingkungan Fakultas Ilmu Komputer'

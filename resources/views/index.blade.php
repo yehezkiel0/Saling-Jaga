@@ -10,7 +10,9 @@
 </head>
 
 <body>
+
     @include('components.navbar')
+
     <div class="jumbotron pt-20 pl-10 font-poppins bg-cover bg-center min-h-screen text-white pb-5 flex lg:flex-row flex-col-reverse lg:items-start items-center justify-between"
         style="background-image: url('/images/home/hero-background.png')">
         <div class="lg:w-[45%] w-full lg:mt-10 lg:pb-0 pb-20">

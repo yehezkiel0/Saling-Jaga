@@ -19,12 +19,8 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'nim' => fake()->randomNumber(8, true),
-            'jenis_kelamin' => fake()->randomElement(['laki-laki', 'perempuan']),
             'email' => fake()->unique()->safeEmail(),
-            'program_studi' => fake()->randomElement(['Teknologi Informasi', 'Sistem Informasi', 'Pendidikan Teknologi Informasi']),
             'password' => '12345', // password
-            'remember_token' => Str::random(10),
         ];
     }
 
