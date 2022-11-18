@@ -14,8 +14,8 @@
     <div class="jumbotron pt-20 pl-10 font-poppins bg-cover bg-center min-h-screen text-white pb-5 flex lg:flex-row flex-col-reverse lg:items-start items-center justify-between"
         style="background-image: url('/images/home/hero-background.png')">
         <div class="lg:w-[45%] w-full lg:mt-10 lg:pb-0 pb-20">
-            <h1 class="lg:text-[45px] text-[30px] font-semibold leading-tight">Website pelaporan kasus kekerasan seksual</h1>
-            <p class="text-sm my-6 w-[90%]">Anda merasa mengalami kekerasan seksual di perguruan tinggi? Atau Anda
+            <h1 class="lg:text-[45px] text-[30px] font-semibold leading-tight mt-28">Website pelaporan kasus kekerasan seksual</h1>
+            <p class="text-sm my-6 w-[90%]">Anda merasa mengalami kekerasan seksual di perguruan tinggi atau Anda
                 mengetahui adanya kekerasan
                 seksual?
                 Segera laporkan di sini.</p>
