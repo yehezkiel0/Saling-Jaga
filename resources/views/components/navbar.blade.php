@@ -58,7 +58,6 @@
                 </a>
             </ul>
         </div>
-<<<<<<< HEAD
         <div>
             @auth
                 <p>Welcome back, {{ auth()->user()->name }}</p>
@@ -78,16 +77,6 @@
             @endauth
             
             
-=======
-        <div class="nav-buttons hidden lg:block text-sm">
-            <a href="/login" class="mx-1 px-4 py-2 text-white border-[1px] border-white rounded-lg">
-                <button>Sign in</button>
-            </a>
-            <a href="/register"
-                class="mx-1 px-4 py-2 bg-white text-[#2a55ee] hover:bg-slate-100 transition duration-200 border-[1px] border-white rounded-lg">
-                <button>Sign up</button>
-            </a>
->>>>>>> 21b01d78fac094aecd1b5fdd0eceff2465ffa00e
         </div>
     </div>
     <script>
