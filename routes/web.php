@@ -17,7 +17,7 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', function () {
     return view('index');
-})->middleware('auth');
+});
 
 Route::get('/test', function () {
     return view('index');

@@ -88,7 +88,7 @@
     <div class="cara-pelaporan font-poppins flex flex-col items-center justify-center">
         <h1 class="text-primary text-3xl font-bold mt-20 mb-10">cara pelaporan</h1>
         <div class="flex flex-wrap justify-center mx-auto">
-            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">01</h3>
                     <h4 class="font-semibold text-lg ml-2">registrasi</h4>
@@ -96,7 +96,7 @@
                 <p class="text-sm">Sebelum menyampaikan pengaduan, Anda harus terdaftar. Klik disini apabila Anda belum
                     terdaftar</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">02</h3>
                     <h4 class="font-semibold text-lg ml-2">Menerima link aktivasi via email</h4>
@@ -104,14 +104,14 @@
                 <p class="text-sm">Setelah mengisi form pendaftaran dengan lengkap, link aktivasi akun akan dikirm ke
                     email Anda</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">03</h3>
                     <h4 class="font-semibold text-lg ml-2">Aktivasi akun</h4>
                 </div>
                 <p class="text-sm">Untuk melakukan aktivasi akun, klik link aktivasi yang Anda terima melalui email.</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">04</h3>
                     <h4 class="font-semibold text-lg ml-2">Login</h4>
@@ -119,7 +119,7 @@
                 <p class="text-sm">Apabila akun Anda telah aktif, silakan login untuk dapat menyampaikan pengaduan, klik
                     disini untuk login.</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">05</h3>
                     <h4 class="font-semibold text-lg ml-2">Sampaikan pengaduan</h4>
@@ -127,7 +127,7 @@
                 <p class="text-sm">Baca dengan seksama penjelasan mengenai jenis pengaduan yang akan Anda sampaikan,
                     apabila telah yakin klik tombol “Lakukan Pengaduan”.</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">06</h3>
                     <h4 class="font-semibold text-lg ml-2">Menerima nomor Tiket</h4>
@@ -135,7 +135,7 @@
                 <p class="text-sm">Pengaduan yang Anda sampaikan akan mengalami validasi, apabila valid nomor tiket
                     pengaduan akan dikirim ke email Anda.</p>
             </div>
-            <div class="card shadow-lg rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">07</h3>
                     <h4 class="font-semibold text-lg ml-2">Telusuri pengaduan</h4>
