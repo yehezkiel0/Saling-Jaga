@@ -58,36 +58,47 @@
                 </a>
             </ul>
         </div>
-<<<<<<< HEAD
-        <div>
+        <div class="nav-buttons lg:block hidden">
             @auth
-                <p>Welcome back, {{ auth()->user()->name }}</p>
-                <form action="/logout" method="post">
+                {{-- <p>Welcome back, {{ auth()->user()->name }}</p> --}}
+                <form action="/logout" method="post" class="relative w-fit">
                     @csrf
-                    <a href="/login" class="mx-1 my-1 text-white border-[1px] border-white rounded-lg">
+                    {{-- <a href="/login" class="mx-1 my-1 text-white border-[1px] border-white rounded-lg">
                         <button>Logout</button>
-                    </a>
+                    </a> --}}
+                    <div class="flex items-center">
+                        <button class="hover:opacity-80 hover:shadow-xl transition duration-300" type="button">
+                            <x-fas-search class="text-white w-[25px]" />
+                        </button>
+                        <button class="dropdown hover:opacity-80 hover:shadow-xl transition duration-300 ml-5" type="button">
+                            <x-fas-user-circle class="text-white w-[30px]" />
+                        </button>
+                    </div>
+                    <!-- Dropdown menu -->
+                    <div id="dropdown"
+                        class="hidden absolute right-0 top-10 w-fit btn-logout z-10 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                            <li>
+                                <button
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logout</button>
+                            </li>
+                        </ul>
+                    </div>
+
                 </form>
             @else
+            <div>
                 <a href="/login" class="mx-1 px-4 py-2 text-white border-[1px] border-white rounded-lg">
                     <button>Sign in</button>
                 </a>
-                <a href="/register" class="mx-1 px-4 py-2 bg-white text-[#2a55ee] hover:bg-slate-100 transition duration-200 border-[1px] border-white rounded-lg">
+                <a href="/register"
+                    class="mx-1 px-4 py-2 bg-white text-[#2a55ee] hover:bg-slate-100 transition duration-200 border-[1px] border-white rounded-lg">
                     <button>Sign up</button>
                 </a>
+            </div>
             @endauth
-            
-            
-=======
-        <div class="nav-buttons hidden lg:block text-sm">
-            <a href="/login" class="mx-1 px-4 py-2 text-white border-[1px] border-white rounded-lg">
-                <button>Sign in</button>
-            </a>
-            <a href="/register"
-                class="mx-1 px-4 py-2 bg-white text-[#2a55ee] hover:bg-slate-100 transition duration-200 border-[1px] border-white rounded-lg">
-                <button>Sign up</button>
-            </a>
->>>>>>> 21b01d78fac094aecd1b5fdd0eceff2465ffa00e
+
+
         </div>
     </div>
     <script>
@@ -95,10 +106,18 @@
         const navLinks = document.getElementsByClassName('nav-links')[0];
         const buttons = document.getElementsByClassName('nav-buttons')[0];
 
+        const dropdown = document.getElementsByClassName('dropdown')[0];
+        const btnLogout = document.getElementsByClassName('btn-logout')[0];
+
+        if(typeof dropdown !== 'undefined' && typeof btnLogout !== 'undefined')
+        dropdown.addEventListener('click', () => {
+            btnLogout.classList.toggle('hidden');
+        })
+
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('hidden');
             buttons.classList.toggle('hidden');
-        })
+        })  
     </script>
 </body>
 
