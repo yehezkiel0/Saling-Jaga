@@ -23,9 +23,14 @@ Route::get('/test', function () {
     return view('index');
 });
 
+Route::get('/faq', function () {
+    return view('faq');
+});
+
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
+
