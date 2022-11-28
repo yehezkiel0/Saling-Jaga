@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 
@@ -23,9 +24,7 @@ Route::get('/test', function () {
     return view('index');
 });
 
-Route::get('/faq', function () {
-    return view('faq');
-});
+Route::get('/faq', [FaqController::class, 'index']);
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
