@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
     <footer class="bg-primary-dark text-white p-10 font-poppins">
         <div class="flex lg:items-center justify-between lg:flex-row flex-col">
             <h3 class="text-2xl lg:w-[40%]">Apakah anda sudah siap untuk mendapatkan keadilan?</h3>
@@ -80,8 +69,6 @@
                 </div>
             </div>
         </div>
-        <p class="lg:text-center mt-10 text-primary-lighter text-sm">Copyright © 2022 Universitas Brawijaya  - All rights reserved.</p>
+        <p class="lg:text-center mt-10 text-primary-lighter text-sm">Copyright © 2022 Universitas Brawijaya - All rights
+            reserved.</p>
     </footer>
-</body>
-
-</html>

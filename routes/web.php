@@ -30,6 +30,10 @@ Route::get('/contact', function (){
     return view('contact');
 });
 
+Route::get('/layanan', function (){
+    return view('layanan');
+})->middleware('auth');
+
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 

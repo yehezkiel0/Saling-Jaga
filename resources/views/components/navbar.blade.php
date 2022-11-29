@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite('public/css/style.css')
-</head>
-
-<body>
-    <div
+    <nav
         class="fixed z-50 top-0 w-full shadow-lg navbar p-5 px-10 flex lg:flex-row flex-col justify-between lg:items-center bg-primary font-poppins text-white ">
         <button id="hamburger" class="lg:hidden block absolute right-10 top-[23px] z-50">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -70,7 +58,8 @@
                         <button class="hover:opacity-80 hover:shadow-xl transition duration-300" type="button">
                             <x-fas-search class="text-white w-[25px]" />
                         </button>
-                        <button class="dropdown hover:opacity-80 hover:shadow-xl transition duration-300 ml-5" type="button">
+                        <button class="dropdown hover:opacity-80 hover:shadow-xl transition duration-300 ml-5"
+                            type="button">
                             <x-fas-user-circle class="text-white w-[30px]" />
                         </button>
                     </div>
@@ -82,7 +71,8 @@
                                 @csrf
                                 <li>
                                     <button
-                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" type="submit">Logout</button>
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                        type="submit">Logout</button>
                                 </li>
                             </form>
                         </ul>
@@ -90,20 +80,20 @@
 
                 </form>
             @else
-            <div>
-                <a href="/login" class="mx-1 px-4 py-2 text-white border-[1px] border-white rounded-lg">
-                    <button>Sign in</button>
-                </a>
-                <a href="/register"
-                    class="mx-1 px-4 py-2 bg-white text-[#2a55ee] hover:bg-slate-100 transition duration-200 border-[1px] border-white rounded-lg">
-                    <button>Sign up</button>
-                </a>
-            </div>
+                <div>
+                    <a href="/login" class="mx-1 px-4 py-2 text-white border-[1px] border-white rounded-lg">
+                        <button>Sign in</button>
+                    </a>
+                    <a href="/register"
+                        class="mx-1 px-4 py-2 bg-white text-[#2a55ee] hover:bg-slate-100 transition duration-200 border-[1px] border-white rounded-lg">
+                        <button>Sign up</button>
+                    </a>
+                </div>
             @endauth
 
 
         </div>
-    </div>
+    </nav>
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementsByClassName('nav-links')[0];
@@ -112,16 +102,13 @@
         const dropdown = document.getElementsByClassName('dropdown')[0];
         const btnLogout = document.getElementsByClassName('btn-logout')[0];
 
-        if(typeof dropdown !== 'undefined' && typeof btnLogout !== 'undefined')
-        dropdown.addEventListener('click', () => {
-            btnLogout.classList.toggle('hidden');
-        })
+        if (typeof dropdown !== 'undefined' && typeof btnLogout !== 'undefined')
+            dropdown.addEventListener('click', () => {
+                btnLogout.classList.toggle('hidden');
+            })
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('hidden');
             buttons.classList.toggle('hidden');
-        })  
+        })
     </script>
-</body>
-
-</html>
