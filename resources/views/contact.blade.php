@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Saling Jaga</title>
-    @vite('public/css/style.css')
-</head>
-<body>
-    @include('components.navbar')
+@extends('layouts.app')
+
+@section('content')
     <div class="font-poppins flex min-h-screen w-full flex-col-reverse lg:flex-row justify-between">
         <div class="lg:mx-32 lg:w-[30%] w-full pt-[150px]">
             <div class=" mt-10 items-center flex flex-col lg:w-full">
@@ -59,6 +51,4 @@
             
         </div>
     </div>
-    @include('components.footer')
-</body>
-</html>
+@endsection

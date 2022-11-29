@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Saling Jaga</title>
-    @vite('public/css/style.css')
-</head>
-
-<body>
-
-    @include('components.navbar')
-
+@section('content')
     <div class="jumbotron pt-20 pl-10 font-poppins bg-cover bg-center min-h-screen text-white pb-5 flex lg:flex-row flex-col-reverse lg:items-start items-center justify-between"
         style="background-image: url('/images/home/hero-background.png')">
         <div class="lg:w-[45%] w-full lg:mt-10 lg:pb-0 pb-20">
@@ -37,7 +25,8 @@
     <div class="w-full font-poppins">
         <p class="text-center mt-20 mb-20">Dipercaya oleh lebih dari <span class="text-primary font-bold">1,250+</span>
             customers</p>
-        <div class="card flex lg:flex-row flex-col items-center justify-between lg:w-[50%] w-fit mx-auto lg:p-5 p-3 shadow-xl mt-10 mb-20 rounded-xl">
+        <div
+            class="card flex lg:flex-row flex-col items-center justify-between lg:w-[50%] w-fit mx-auto lg:p-5 p-3 shadow-xl mt-10 mb-20 rounded-xl">
             <img src="/images/home/logo-ub.png" class="h-20 lg:mb-0 mb-3">
             <img src="/images/home/logo-filkom.png" class="h-6 lg:mb-0 mb-3">
             <img src="/images/home/logo-komnas-ham.png" class="h-20 lg:mb-0 mb-3">
@@ -88,7 +77,8 @@
     <div class="cara-pelaporan font-poppins flex flex-col items-center justify-center">
         <h1 class="text-primary text-3xl font-bold mt-20 mb-10">cara pelaporan</h1>
         <div class="flex flex-wrap justify-center mx-auto">
-            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div
+                class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">01</h3>
                     <h4 class="font-semibold text-lg ml-2">registrasi</h4>
@@ -96,7 +86,8 @@
                 <p class="text-sm">Sebelum menyampaikan pengaduan, Anda harus terdaftar. Klik disini apabila Anda belum
                     terdaftar</p>
             </div>
-            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div
+                class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">02</h3>
                     <h4 class="font-semibold text-lg ml-2">Menerima link aktivasi via email</h4>
@@ -104,14 +95,16 @@
                 <p class="text-sm">Setelah mengisi form pendaftaran dengan lengkap, link aktivasi akun akan dikirm ke
                     email Anda</p>
             </div>
-            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div
+                class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">03</h3>
                     <h4 class="font-semibold text-lg ml-2">Aktivasi akun</h4>
                 </div>
                 <p class="text-sm">Untuk melakukan aktivasi akun, klik link aktivasi yang Anda terima melalui email.</p>
             </div>
-            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div
+                class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">04</h3>
                     <h4 class="font-semibold text-lg ml-2">Login</h4>
@@ -119,7 +112,8 @@
                 <p class="text-sm">Apabila akun Anda telah aktif, silakan login untuk dapat menyampaikan pengaduan, klik
                     disini untuk login.</p>
             </div>
-            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div
+                class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">05</h3>
                     <h4 class="font-semibold text-lg ml-2">Sampaikan pengaduan</h4>
@@ -127,7 +121,8 @@
                 <p class="text-sm">Baca dengan seksama penjelasan mengenai jenis pengaduan yang akan Anda sampaikan,
                     apabila telah yakin klik tombol “Lakukan Pengaduan”.</p>
             </div>
-            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div
+                class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">06</h3>
                     <h4 class="font-semibold text-lg ml-2">Menerima nomor Tiket</h4>
@@ -135,7 +130,8 @@
                 <p class="text-sm">Pengaduan yang Anda sampaikan akan mengalami validasi, apabila valid nomor tiket
                     pengaduan akan dikirim ke email Anda.</p>
             </div>
-            <div class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
+            <div
+                class="card shadow-lg hover:shadow transition duration-300 cursor-pointer  rounded-xl px-7 py-7 sm:w-[350px] m-5">
                 <div class="flex items-start mb-4">
                     <h3 class="text-xl text-primary font-bold">07</h3>
                     <h4 class="font-semibold text-lg ml-2">Telusuri pengaduan</h4>
@@ -226,7 +222,4 @@
             </div>
         </div>
     </div>
-    @include('components.footer')
-</body>
-
-</html>
+@endsection
