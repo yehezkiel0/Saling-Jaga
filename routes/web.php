@@ -27,6 +27,10 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
+Route::get('/contact', function (){
+    return view('contact');
+});
+
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
