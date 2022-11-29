@@ -9,7 +9,7 @@
 </head>
 <body>
     @include('components.navbar')
-    <div class="flex min-h-screen w-full flex-col-reverse lg:flex-row justify-between">
+    <div class="font-poppins flex min-h-screen w-full flex-col-reverse lg:flex-row justify-between">
         <div class="lg:mx-32 lg:w-[30%] w-full pt-[150px]">
             <div class=" mt-10 items-center flex flex-col lg:w-full">
                 
@@ -20,7 +20,7 @@
                             <li class="rounded-md my-5 py-2 mb-5 items-center bg-gradient-to-b from-[#335CD6] to-[#2559F5]
                              text-white flex justify-between px-10">
                                 <span class="rounded bg-white w-10 p-2"><img src="/images/contact/phone.svg" alt=""></span>
-                                <span class="px-5 text-xl min-w-[150px]">WhatsApp</span>
+                                <span class="px-5 text-lg min-w-[150px]">WhatsApp</span>
                             </li>
                         </a>
                         
@@ -28,7 +28,7 @@
                             <li class="rounded-md py-2 mb-5 items-center bg-gradient-to-b from-[#335CD6] to-[#2559F5]
                              text-white flex justify-between px-10">
                                 <span class="rounded bg-white w-10 p-2"><img src="/images/contact/instagram.svg" alt=""></span>
-                                <span class="px-5 text-xl min-w-[150px]">Instagram</span>
+                                <span class="px-5 text-lg min-w-[150px]">Instagram</span>
                             </li>
                         </a>
 
@@ -36,7 +36,7 @@
                             <li class="rounded-md py-2 mb-5 items-center bg-gradient-to-b from-[#335CD6] to-[#2559F5]
                              text-white flex justify-between px-10">
                                 <span class="rounded bg-white w-10 p-2"><img src="/images/contact/mail.svg" alt=""></span>
-                                <span class="px-5 text-xl min-w-[150px]">Email</span>
+                                <span class="px-5 text-lg min-w-[150px]">Email</span>
                             </li>
                         </a>
 
@@ -44,7 +44,7 @@
                             <li class="rounded-md py-2 mb-5 items-center bg-gradient-to-b from-[#335CD6] to-[#2559F5]
                              text-white flex justify-between px-10">
                                 <span class="rounded bg-white w-10 p-2"><img src="/images/contact/twitter.svg" alt=""></span>
-                                <span class="px-5 text-xl min-w-[150px]">Twitter</span>
+                                <span class="px-5 text-lg min-w-[150px]">Twitter</span>
                             </li>
                         </a>
                     </ul>

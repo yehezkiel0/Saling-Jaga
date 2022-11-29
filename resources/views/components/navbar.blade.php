@@ -34,25 +34,25 @@
                 </a>
                 <a href="/layanan">
                     <li
-                        class="mx-2 lg:my-0 my-2 rounded-lg hover:bg-white {{ Request::is('/layanan') ? 'bg-white text-primary font-semibold' : '' }} hover:text-primary px-3 py-2 transition duration-200">
+                        class="mx-2 lg:my-0 my-2 rounded-lg hover:bg-white {{ Request::is('layanan') ? 'bg-white text-primary font-semibold' : '' }} hover:text-primary px-3 py-2 transition duration-200">
                         Layanan
                     </li>
                 </a>
                 <a href="/faq">
                     <li
-                        class="mx-2 lg:my-0 my-2 rounded-lg hover:bg-white {{ Request::is('/faq') ? 'bg-white text-primary font-semibold' : '' }} hover:text-primary px-3 py-2 transition duration-200">
+                        class="mx-2 lg:my-0 my-2 rounded-lg hover:bg-white {{ Request::is('faq') ? 'bg-white text-primary font-semibold' : '' }} hover:text-primary px-3 py-2 transition duration-200">
                         FAQ
                     </li>
                 </a>
                 <a href="/berita">
                     <li
-                        class="mx-2 lg:my-0 my-2 rounded-lg hover:bg-white {{ Request::is('/berita') ? 'bg-white text-primary font-semibold' : '' }} hover:text-primary px-3 py-2 transition duration-200">
+                        class="mx-2 lg:my-0 my-2 rounded-lg hover:bg-white {{ Request::is('berita') ? 'bg-white text-primary font-semibold' : '' }} hover:text-primary px-3 py-2 transition duration-200">
                         Berita
                     </li>
                 </a>
-                <a href="/kontak">
+                <a href="/contact">
                     <li
-                        class="mx-2 lg:my-0 my-2 rounded-lg hover:bg-white {{ Request::is('/kontak') ? 'bg-white text-primary font-semibold' : '' }} hover:text-primary px-3 py-2 transition duration-200">
+                        class="mx-2 lg:my-0 my-2 rounded-lg hover:bg-white {{ Request::is('contact') ? 'bg-white text-primary font-semibold' : '' }} hover:text-primary px-3 py-2 transition duration-200">
                         Kontak
                     </li>
                 </a>

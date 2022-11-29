@@ -10,7 +10,7 @@
 <body>
     
 
-    <div class="flex w-full min-h-screen lg:flex-row flex-col-reverse">
+    <div class="flex w-full min-h-screen lg:flex-row flex-col-reverse font-poppins">
         <div class = "lg:mx-20 lg:w-[50%] w-full">
         <div class="ml-20 mt-12 mb-5 ">
             <img src="/images/Logo Fix.svg" alt="">
@@ -59,7 +59,7 @@
                     </div>
                 <button class="bg-blue-600 px-32 py-3 rounded-md text-white w-[200px] mb-5 flex items-center justify-center" type="submit">Register</button>
                 </form>
-                <p class="lg:mb-0 mb-8">Sudah punya akun? <a href="/login" class="text-[#1877F2]">Login</a></p>
+                <p class="lg:mb-5 mb-8">Sudah punya akun? <a href="/login" class="text-[#1877F2]">Login</a></p>
                 </div>
             </div>
         </div>

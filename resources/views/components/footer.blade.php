@@ -19,7 +19,7 @@
                 </button>
                 <button
                     class="md:mt-0 mt-2 rounded-md px-5 py-3 sm:ml-5 border-2 border-transparent hover:border-white transition duration-300 font-semibold">
-                    Laporkan sekarang
+                    Pelajari Dahulu
                 </button>
             </div>
         </div>
