@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\LoginController;
@@ -26,9 +27,7 @@ Route::get('/test', function () {
 
 Route::get('/faq', [FaqController::class, 'index']);
 
-Route::get('/contact', function (){
-    return view('contact');
-});
+Route::get('/contact', [ContactController::class, 'index']);
 
 Route::get('/layanan', function (){
     return view('layanan');
