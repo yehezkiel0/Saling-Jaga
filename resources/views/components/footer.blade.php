@@ -16,7 +16,7 @@
         <div class="mt-5 flex items-start justify-between lg:flex-row flex-col">
             <div class="flex items-center">
                 <img src="/images/home/Logo.svg" />
-                <p class="text-white uppercase text-2xl ml-3">pesek</p>
+                <p class="text-white uppercase text-2xl ml-3">saling jaga</p>
             </div>
             <div class="flex flex-wrap lg:mt-0 mt-10">
                 <ul class="mr-10">
@@ -52,7 +52,7 @@
                 </ul>
             </div>
             <div class="lg:mt-0 mt-10">
-                <p>harashmentreport@pesek.co.id</p>
+                <p>harashmentreport@salingjaga.co.id</p>
                 <div class="flex mt-5">
                     <a href='/'>
                         <x-fab-instagram class="mx-2" style='height: 20px;' />
