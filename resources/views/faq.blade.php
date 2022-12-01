@@ -7,7 +7,7 @@
                 <div class="mt-12 w-full">
                     <button id="dropdownDefault"
                         style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;"
-                        class="dropdown-button flex justify-between min-w-[100%] text-black  bg-white hover:ring-2 hover:ring-primary-lighter focus:ring-2 focus:outline-none transition duration-300 focus:ring-primary-light font-semibold rounded-lg text-lg py-2.5 text-center items-center p-5"
+                        class="dropdown-button flex justify-between min-w-[100%] text-primary-dark  bg-white hover:ring-2 hover:ring-primary-lighter focus:ring-2 focus:outline-none transition duration-300 focus:ring-primary-light font-semibold rounded-lg text-lg py-2.5 text-center items-center p-5"
                         type="button">
                         <p>{{ $faq->question }}</p>
                         <svg class="md:block hidden dropdown-arrow transition duration-200 ml-2 w-4 h-4" aria-hidden="true"

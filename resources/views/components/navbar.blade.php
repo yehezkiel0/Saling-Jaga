@@ -55,9 +55,6 @@
                         <button>Logout</button>
                     </a> --}}
                     <div class="flex items-center">
-                        <button class="hover:opacity-80 hover:shadow-xl transition duration-300" type="button">
-                            <x-fas-search class="text-white w-[25px]" />
-                        </button>
                         <button class="dropdown hover:opacity-80 hover:shadow-xl transition duration-300 ml-5"
                             type="button">
                             <x-fas-user-circle class="text-white w-[30px]" />
@@ -73,6 +70,11 @@
                                     <button
                                         class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                         type="submit">Logout</button>
+                                </li>
+                                <li>
+                                    <a
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                        href="/riwayat">Pelaporan</a>
                                 </li>
                             </form>
                         </ul>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\LoginController;
@@ -28,17 +29,19 @@ Route::get('/test', function () {
 
 Route::get('/faq', [FaqController::class, 'index']);
 
-Route::get('/contact', function (){
-    return view('contact');
-});
+Route::get('/contact', [ContactController::class, 'index']);
 
 Route::get('/layanan', [LaporanController::class, 'index'])->middleware('auth');
 Route::post('/laporan', [LaporanController::class, 'store']);
 
+Route::get('/riwayat', function () {
+    return view('riwayat');
+})->middleware('auth');
+
+// routes for authenticating
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
-
