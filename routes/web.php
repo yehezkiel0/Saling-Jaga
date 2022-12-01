@@ -29,14 +29,18 @@ Route::get('/faq', [FaqController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index']);
 
-Route::get('/layanan', function (){
+Route::get('/layanan', function () {
     return view('layanan');
 })->middleware('auth');
 
+Route::get('/riwayat', function () {
+    return view('riwayat');
+})->middleware('auth');
+
+// routes for authenticating
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
-
