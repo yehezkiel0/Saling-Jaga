@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('laporans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
             // identitas pelapor
             $table->string('nama_pelapor');
             $table->enum('gender_pelapor', ['laki-laki', 'perempuan']);

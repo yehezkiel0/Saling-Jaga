@@ -31,12 +31,17 @@
                 seksual?
                 Segera laporkan di sini.</p>
             <div>
-                <button
-                    class="font-semibold rounded-md bg-white hover:opacity-80 transition duration-300 text-primary px-5 py-3 focus:ring-white focus:ring-4 md:mb-0 mb-2 mr-2">Laporkan
-                    sekarang</button>
-                <button
+                <form action="/layanan" method="get" class="inline">
+                    <button type="submit"
+                        class="font-semibold rounded-md bg-white hover:opacity-80 transition duration-300 text-primary px-5 py-3 focus:ring-white focus:ring-4 md:mb-0 mb-2 mr-2">Laporkan
+                        sekarang</button>
+                </form>
+                <form action="/contact" method="get" class="inline">
+                    <button type="submit"
                     class="rounded-md px-5 py-3 lg:ml-5 border-2 md:border-transparent border-white hover:border-white transition duration-300">pelajari
                     dahulu</button>
+                </form>
+                
             </div>
         </div>
         <div>

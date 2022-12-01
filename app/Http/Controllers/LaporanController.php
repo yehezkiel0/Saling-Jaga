@@ -20,6 +20,12 @@ class LaporanController extends Controller
         return view('layanan');
     }
 
+    public function dashboard() {
+        return view('riwayat', [
+            'laporans' => Laporan::where('user_id', auth()->user()->id)->get()
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -57,6 +63,8 @@ class LaporanController extends Controller
             'tgl_waktu_kejadian' => 'required',
             'image' => 'required'
         ]);
+
+        $validatedData['user_id'] = auth()->user()->id;
 
         Laporan::create($validatedData);
         return redirect('/')->with('success', 'Input Laporan berhasil dikirim!');
