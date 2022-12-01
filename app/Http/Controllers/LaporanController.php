@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laporan;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreLaporanRequest;
 use App\Http\Requests\UpdateLaporanRequest;
 
@@ -15,7 +17,7 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        //
+        return view('layanan');
     }
 
     /**
@@ -34,9 +36,30 @@ class LaporanController extends Controller
      * @param  \App\Http\Requests\StoreLaporanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreLaporanRequest $request)
+    public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_pelapor' => 'required|max:255',
+            'gender_pelapor' => 'required',
+            'no_iden_pelapor' => 'required|max:255|',
+            'prodi_pelapor' => 'required',
+            'no_hp_pelapor' => 'required|max:255|',
+            'email_pelapor' => 'required|max:255|',
+            'nama_korban' => 'required|max:255|',
+            'gender_korban' => 'required',
+            'no_iden_korban' => 'required|max:255|',
+            'prodi_korban' => 'required',
+            'no_hp_korban' => 'required|max:255|',
+            'email_korban' => 'required|max:255|',
+            'perihal' => 'required',
+            'lokasi_kejadian' => 'required',
+            'deskripsi_kejadian' => 'required',
+            'tgl_waktu_kejadian' => 'required',
+            'image' => 'required'
+        ]);
+
+        Laporan::create($validatedData);
+        return redirect('/')->with('success', 'Input Laporan berhasil dikirim!');
     }
 
     /**

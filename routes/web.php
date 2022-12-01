@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\LayananController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -30,9 +32,8 @@ Route::get('/contact', function (){
     return view('contact');
 });
 
-Route::get('/layanan', function (){
-    return view('layanan');
-})->middleware('auth');
+Route::get('/layanan', [LaporanController::class, 'index'])->middleware('auth');
+Route::post('/laporan', [LaporanController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);

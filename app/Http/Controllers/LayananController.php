@@ -15,7 +15,6 @@ class LayananController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**

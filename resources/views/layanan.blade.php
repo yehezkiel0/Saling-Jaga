@@ -3,8 +3,9 @@
 @section('content')
     <div class="flex flex-col items-start lg:pt-40 pt-32 lg:px-20 md:px-10 px-5 w-full">
         <div class="lg:w-[80%] w-full mx-auto mb-10">
-            <form method="post" action="/" class="rounded-xl p-10"
+            <form method="post" action="/laporan" class="rounded-xl p-10"
                 style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                @csrf
                 <h2 class="capitalize text-primary font-bold text-lg">form pengaduan online</h2>
                 <hr class="my-4 bg-black h-[2px]">
                 <p class="mb-4 font-semibold">Field dengan tanda "<span class="text-red-300">*</span>"" wajib untuk diisi,
@@ -16,15 +17,20 @@
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nama Pelapor<span class="text-red-300">*</span></label>
                             <input required name="nama_pelapor" type="text"
-                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Contoh: Agus Setiawan">
+                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400 form-control @error('nama_pelapor') is-invalid @enderror"
+                                placeholder="Contoh: Agus Setiawan" value="{{ old('title') }}">
+                                @error('nama_pelapor')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Jenis Kelamin<span class="text-red-300">*</span></label>
                             <div class="lg:min-w-[65%] lg:w-fit w-full">
-                                <input required type="radio" name="gender_pelapor" class="p-2" value="laki-laki">
+                                <input required type="radio" name="gender_pelapor" class="p-2 @error('gender_pelapor') is-invalid @enderror" value="laki-laki">
                                 <label for="laki-laki">Laki - laki</label>
-                                <input required type="radio" name="gender_pelapor" value="perempuan">
+                                <input required type="radio" name="gender_pelapor" class="@error('gender_pelapor') is-invalid @enderror" value="perempuan">
                                 <label for="perempuan">Perempuan</label>
                             </div>
                         </div>
@@ -35,7 +41,7 @@
                                 placeholder="Contoh: 12345">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
-                            <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nomor identitas pelapor<span class="text-red-300">*</span></label>
+                            <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Program Studi pelapor<span class="text-red-300">*</span></label>
                             <select name="prodi_pelapor" type="text"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
                                 placeholder="Contoh: 12345">
@@ -72,6 +78,12 @@
                                 <input required type="radio" name="gender_korban" value="perempuan">
                                 <label for="perempuan">Perempuan</label>
                             </div>
+                        </div>
+                        <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
+                            <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nomor identitas korban<span class="text-red-300">*</span></label>
+                            <input required name="no_iden_korban" type="text"
+                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
+                                placeholder="Contoh: 12345">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Prodi Korban<span class="text-red-300">*</span></label>

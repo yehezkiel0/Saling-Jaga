@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Laporan extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id']; // ini boleh dikosongin kalo semua bisa diinsert secara massal
+
 }
