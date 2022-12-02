@@ -110,5 +110,26 @@ class DatabaseSeeder extends Seeder
             'image' => 'https.image.com'
         ]);
 
+        Laporan::create([
+            'user_id' => 3,
+            'nama_pelapor' => 'Agus Setiawan',
+            'gender_pelapor' => 'laki-laki',
+            'no_iden_pelapor' => '2151508762522123',
+            'prodi_pelapor' => 'TI',
+            'no_hp_pelapor' => '085252678534',
+            'email_pelapor' => 'ridwan@gmail.com',
+            'nama_korban' => 'Bunga Cinta',
+            'gender_korban' => 'perempuan',
+            'no_iden_korban' => '205057592282322',
+            'prodi_korban' => 'SI',
+            'no_hp_korban' => '081567834529',
+            'email_korban' => 'bunga@yahoo.co.id',
+            'perihal' => 'Kekerasan Seksual secara verbal',
+            'lokasi_kejadian' => 'Gedung GKM Lantai 3',
+            'deskripsi_kejadian' => 'Pelaku secara sengaja melakukan tindakan yang tidak menyenangkan kepada korban, dengan cara menyampaikan kata-kata bersifat buruk dan sedikit menyinggung ke arah seksual',
+            'tgl_waktu_kejadian' => '22 Oktober 2022',
+            'image' => 'https.image.com'
+        ]);
+
     }
 }

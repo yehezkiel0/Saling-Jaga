@@ -3,8 +3,9 @@
 @section('content')
     <div class="flex flex-col items-start lg:pt-40 pt-32 lg:px-20 md:px-10 px-5 w-full">
         <div class="lg:w-[80%] w-full mx-auto mb-10">
-            <form method="post" action="/laporan" class="rounded-xl p-10"
+            <form method="post" action="/laporan/{{ $laporan->id }}" class="rounded-xl p-10"
                 style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                @method('put')
                 @csrf
                 <h2 class="capitalize text-primary font-bold text-lg">form pengaduan online</h2>
                 <hr class="my-4 bg-black h-[2px]">
@@ -17,8 +18,8 @@
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nama Pelapor<span class="text-red-300">*</span></label>
                             <input required name="nama_pelapor" type="text"
-                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400 form-control @error('nama_pelapor') is-invalid @enderror"
-                                placeholder="Contoh: Agus Setiawan" value="{{ old('title') }}">
+                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary @error('nama_pelapor') is-invalid @enderror"
+                                reuired autofocus value="{{ old('nama_pelapor', $laporan->nama_pelapor) }}">
                                 @error('nama_pelapor')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -37,8 +38,8 @@
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nomor identitas<span class="text-red-300">*</span></label>
                             <input required name="no_iden_pelapor" type="text"
-                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Contoh: 12345">
+                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary"
+                                required autofocus value="{{ old('no_iden_pelapor', $laporan->no_iden_pelapor) }}">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Program Studi pelapor<span class="text-red-300">*</span></label>
@@ -55,20 +56,20 @@
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nomor HP Pelapor<span class="text-red-300">*</span></label>
                             <input required name="no_hp_pelapor" type="text"
-                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Contoh: 081xxxxxxxxx">
+                                class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary"
+                                value="{{ old('no_hp_pelapor', $laporan->no_hp_pelapor) }}">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Email Pelapor<span class="text-red-300">*</span></label>
                             <input required name="email_pelapor" type="email"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Contoh: agussetiawan@gmail.com">
+                                value="{{ old('email_pelapor', $laporan->email_pelapor) }}">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nama Korban<span class="text-red-300">*</span></label>
                             <input required name="nama_korban" type="text"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Contoh: Agus Setiawan">
+                                value="{{ old('nama_korban', $laporan->nama_korban) }}">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Jenis Kelamin<span class="text-red-300">*</span></label>
@@ -83,7 +84,7 @@
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nomor identitas korban<span class="text-red-300">*</span></label>
                             <input required name="no_iden_korban" type="text"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Contoh: 12345">
+                                value="{{ old('no_iden_korban', $laporan->no_iden_korban) }}">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Prodi Korban<span class="text-red-300">*</span></label>
@@ -101,26 +102,26 @@
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Nomor HP Korban<span class="text-red-300">*</span></label>
                             <input required name="no_hp_korban" type="text"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Contoh: 081xxxxxxxxx">
+                                value="{{ old('no_hp_korban', $laporan->no_hp_korban) }}">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Email Korban<span class="text-red-300">*</span></label>
                             <input required name="email_korban" type="email"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Contoh: agussetiawan@gmail.com">
+                                value="{{ old('email_korban', $laporan->email_korban) }}">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Perihal<span class="text-red-300">*</span></label>
                             <input required name="perihal" type="text"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="perihal">
+                                value="{{ old('perihal', $laporan->perihal) }}">
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Lokasi Kejadian<span class="text-red-300">*</span></label>
                             <div class="lg:w-[65%] w-full">
                                 <textarea required name="lokasi_kejadian"
                                     class="w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                    placeholder="tempat kejadian perkara"></textarea>
+                                    >{{ old('lokasi_kejadian', $laporan->lokasi_kejadian) }}</textarea>
                             </div>
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
@@ -128,20 +129,20 @@
                             <div class="lg:w-[65%] w-full">
                                 <textarea required name="deskripsi_kejadian"
                                     class="w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                    placeholder="ceritakan permasalahan anda di sini..."></textarea>
+                                    >{{ old('deskripsi_kejadian', $laporan->deskripsi_kejadian) }}</textarea>
                             </div>
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Tanggal Waktu Kejadian<span class="text-red-300">*</span></label>
                             <textarea required name="tgl_waktu_kejadian" type="text"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="Uraikan tanggal dan waktu kejadian"></textarea>
+                                >{{ old('tgl_waktu_kejadian', $laporan->tgl_waktu_kejadian) }}</textarea>
                         </div>
                         <div class="name flex lg:flex-row flex-col items-center justify-between flex-wrap my-5">
                             <label class="lg:w-[30%] lg:mb-0 mb-3 text-left w-full">Gambar</label>
                             <input required name="image" type="text"
                                 class="lg:w-[65%] w-full placeholder:text-sm p-2 rounded-lg outline-none ring-2 transition duration-200 focus:ring-4 focus:ring-primary-lighter ring-primary placeholder:text-gray-400"
-                                placeholder="paste url gambar pendukung keterangan anda di sini">
+                                value="{{ old('image', $laporan->image) }}">
                         </div>
                     </div>
                 </div>

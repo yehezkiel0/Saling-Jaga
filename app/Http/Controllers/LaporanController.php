@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Laporan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\StoreLaporanRequest;
 use App\Http\Requests\UpdateLaporanRequest;
 
@@ -78,7 +80,9 @@ class LaporanController extends Controller
      */
     public function show(Laporan $laporan)
     {
-        //
+        return view('detailLaporan', [
+            'laporan' => $laporan
+        ]);
     }
 
     /**
@@ -101,7 +105,35 @@ class LaporanController extends Controller
      */
     public function update(UpdateLaporanRequest $request, Laporan $laporan)
     {
-        //
+        $rules = [
+            'nama_pelapor' => 'required|max:255',
+            'gender_pelapor' => 'required',
+            'no_iden_pelapor' => 'required|max:255|',
+            'prodi_pelapor' => 'required',
+            'no_hp_pelapor' => 'required|max:255|',
+            'email_pelapor' => 'required|max:255|',
+            'nama_korban' => 'required|max:255|',
+            'gender_korban' => 'required',
+            'no_iden_korban' => 'required|max:255|',
+            'prodi_korban' => 'required',
+            'no_hp_korban' => 'required|max:255|',
+            'email_korban' => 'required|max:255|',
+            'perihal' => 'required',
+            'lokasi_kejadian' => 'required',
+            'deskripsi_kejadian' => 'required',
+            'tgl_waktu_kejadian' => 'required',
+            'image' => 'required'
+        ];
+
+        // if($request->id != $laporan->id) {
+        //     $rules['id'] = 'required';
+        // }
+
+        $validatedData = $request->validate($rules);
+
+        Laporan::where('id', $laporan->id)->update($validatedData);
+    
+        return redirect('/riwayat')->with('success', 'Laporan telah berhasil di update!');
     }
 
     /**
@@ -112,6 +144,7 @@ class LaporanController extends Controller
      */
     public function destroy(Laporan $laporan)
     {
-        //
+        Laporan::destroy($laporan->id);
+        return redirect('/riwayat')->with('success', 'Laporan telah dihapus!');
     }
 }
