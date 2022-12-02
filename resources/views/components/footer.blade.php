@@ -2,14 +2,18 @@
         <div class="flex lg:items-center justify-between lg:flex-row flex-col">
             <h3 class="text-2xl lg:w-[40%]">Apakah anda sudah siap untuk mendapatkan keadilan?</h3>
             <div class="lg:w-[45%] flex lg:justify-end lg:mt-0 mt-5 md:flex-row flex-col">
-                <button
-                    class="rounded-md bg-white hover:opacity-80 transition duration-300 text-primary-dark px-5 py-3 focus:ring-white focus:ring-4 font-semibold">
-                    Laporkan sekarang
-                </button>
-                <button
-                    class="md:mt-0 mt-2 rounded-md px-5 py-3 sm:ml-5 border-2 border-transparent hover:border-white transition duration-300 font-semibold">
-                    Pelajari Dahulu
-                </button>
+                <a href="/layanan">
+                    <button
+                        class="rounded-md bg-white hover:opacity-80 transition duration-300 text-primary-dark px-5 py-3 focus:ring-white focus:ring-4 font-semibold">
+                        Laporkan sekarang
+                    </button>
+                </a>
+                <a href="/">
+                    <button
+                        class="md:mt-0 mt-2 rounded-md px-5 py-3 sm:ml-5 border-2 border-transparent hover:border-white transition duration-300 font-semibold">
+                        Pelajari Dahulu
+                    </button>
+                </a>
             </div>
         </div>
         <hr class="w-full mt-10 opacity-70" />

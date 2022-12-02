@@ -36,6 +36,8 @@ Route::post('/laporan', [LaporanController::class, 'store']);
 
 Route::get('/riwayat', [LaporanController::class, 'dashboard'])->middleware('auth');
 
+Route::get('/laporan/detail', [LaporanController::class, 'dashboard'])->middleware('auth');
+
 // routes for authenticating
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
