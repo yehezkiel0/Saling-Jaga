@@ -16,7 +16,7 @@
                 <div class="w-full lg:px-12 px-8">
                     <h1 class="text-3xl text-primary font-bold mb-5 py-5">KONTAK</h1>
                     <ul class="w-full cursor-pointer">
-                        <a href="">
+                        <a href="http://wa.me/6287852566158">
                             <li class="rounded-md my-5 py-2 mb-5 items-center bg-primary hover:bg-primary-lighter transition duration-300
                              text-white flex justify-between px-10">
                                 <span class="rounded bg-white w-10 p-2"><img src="/images/contact/phone.svg" alt=""></span>
@@ -24,7 +24,7 @@
                             </li>
                         </a>
                         
-                        <a href="">
+                        <a href="https://www.instagram.com/zauhair.jubs/">
                             <li class="rounded-md py-2 mb-5 items-center  bg-primary hover:bg-primary-lighter transition duration-300
                              text-white flex justify-between px-10">
                                 <span class="rounded bg-white w-10 p-2"><img src="/images/contact/instagram.svg" alt=""></span>
@@ -32,7 +32,7 @@
                             </li>
                         </a>
 
-                        <a href="">
+                        <a href="mailto:zauhairdy@gmail.com">
                             <li class="rounded-md py-2 mb-5 items-center  bg-primary hover:bg-primary-lighter transition duration-300
                              text-white flex justify-between px-10">
                                 <span class="rounded bg-white w-10 p-2"><img src="/images/contact/mail.svg" alt=""></span>
@@ -40,7 +40,7 @@
                             </li>
                         </a>
 
-                        <a href="">
+                        <a href="https://twitter.com/zauhair_jubs">
                             <li class="rounded-md py-2 mb-5 items-center  bg-primary hover:bg-primary-lighter transition duration-300
                              text-white flex justify-between px-10">
                                 <span class="rounded bg-white w-10 p-2"><img src="/images/contact/twitter.svg" alt=""></span>
