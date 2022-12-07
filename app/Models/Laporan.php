@@ -11,4 +11,8 @@ class Laporan extends Model
 
     protected $guarded = ['id']; // ini boleh dikosongin kalo semua bisa diinsert secara massal
 
+    public function author() {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
 }
