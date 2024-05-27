@@ -61,7 +61,7 @@
                         <img src="/images/register/Facebook.svg" class = "bg-[#1877F2] w-10 p-2 rounded-md mx-5" alt="">
                         <img src="/images/register/Apple.svg" class = "bg-black w-10 p-2 rounded-md" alt="">
                     </div>
-                <button class="bg-blue-600 px-32 py-3 rounded-md text-white w-[200px] mb-5 flex items-center justify-center" type="submit">Login</button>
+                <button class="bg-blue-600 px-32 py-4 rounded-md text-white w-[200px] mb-5 flex items-center justify-center" type="submit">Login</button>
                 </form>
                 <p class="lg:mb-0 mb-8">Belum punya akun? <a href="/register" class="text-[#1877F2]">Register</a></p>
                 </div>
