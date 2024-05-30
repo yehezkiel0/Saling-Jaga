@@ -37,11 +37,14 @@ Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/layanan', [LaporanController::class, 'index'])->middleware('auth');
 Route::post('/laporan', [LaporanController::class, 'store']);
 
-Route::get('/riwayat', [LaporanController::class, 'dashboard'])->middleware('auth');
 
-Route::get('/laporan/{laporan:id}', [LaporanController::class, 'show'])->middleware('auth');
-Route::post('/laporan/delete/{laporan:id}', [LaporanController::class, 'destroy']);
-Route::put('/laporan/{laporan:id}', [LaporanController::class, 'update']);
+
+Route::middleware('admin')->group(function () {
+    Route::get('/riwayat', [LaporanController::class, 'dashboard']);
+    Route::get('/laporan/{laporan:id}', [LaporanController::class, 'show']);
+    Route::post('/laporan/delete/{laporan:id}', [LaporanController::class, 'destroy']);
+    Route::put('/laporan/{laporan:id}', [LaporanController::class, 'update']);
+});
 
 // routes for authenticating
 Route::get('/register', [RegisterController::class, 'index']);

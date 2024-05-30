@@ -24,14 +24,19 @@ class LoginController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function authenticate(Request $request) {
+    public function authenticate(Request $request)
+    {
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+
+            if (Auth::user()->is_admin) {
+                return redirect()->intended('/');
+            }
 
             return redirect()->intended('/');
         }
@@ -39,13 +44,14 @@ class LoginController extends Controller
         return back()->with('loginError', 'Login failed!');
     }
 
-    public function logout(Request $request) {
+    public function logout(Request $request)
+    {
         Auth::logout();
- 
+
         $request->session()->invalidate();
-    
+
         $request->session()->regenerateToken();
-    
+
         return redirect('/');
     }
 

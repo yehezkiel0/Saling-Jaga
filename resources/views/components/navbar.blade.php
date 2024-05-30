@@ -71,11 +71,12 @@
                                         class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                         type="submit">Logout</button>
                                 </li>
-                                <li>
-                                    <a
-                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        href="/riwayat">Pelaporan</a>
-                                </li>
+                                @if (Auth::check() && Auth::user()->is_admin == true)
+                                    <li>
+                                        <a class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            href="/riwayat">Pelaporan</a>
+                                    </li>
+                                @endif
                             </form>
                         </ul>
                     </div>

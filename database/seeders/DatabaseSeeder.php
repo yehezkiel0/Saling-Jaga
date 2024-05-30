@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Laporan;
 use App\Models\Layanan;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -26,6 +27,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         User::factory(2)->create();
+
+        User::create([
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('123456'),
+            'is_admin' => true
+        ]);
 
         User::create([
             'name' => 'Ridwan Hanif',
@@ -130,6 +138,5 @@ class DatabaseSeeder extends Seeder
             'tgl_waktu_kejadian' => '22 Oktober 2022',
             'image' => 'https.image.com'
         ]);
-
     }
 }
