@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
@@ -26,6 +27,8 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('index');
 });
+
+Route::get('/berita', [BeritaController::class, 'index']);
 
 Route::get('/faq', [FaqController::class, 'index']);
 
